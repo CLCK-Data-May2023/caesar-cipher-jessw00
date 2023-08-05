@@ -5,7 +5,7 @@ def caesar_cipher(text,shift):
 
     encrypted_text = ''
     for char in text:
-        if char.lower() in mapping:
+        if char.isalpha():
             if char.isupper():
                 encrypted_text += mapping[char.lower()].upper()
             else:
