@@ -7,13 +7,13 @@ def caesar_cipher(text,shift):
     for char in text:
         if char.lower() in char_map:
             encrypted_char = char_map[char.lower()]
-            encrypted_text += encrypted_char.upper() if char.isupper() else encrypted_char
+            encrypted_text += encrypted_char.lower() if char.isupper() else encrypted_char
         else:
             encrypted_text += char
 
     return encrypted_text
 
-text = input("Please enter text to be encrypted:")
 shift = 5
+text = input("Please enter sentence to be encrypted:")
 encrypted_text = caesar_cipher(text, shift)
-print("Encryption:", encrypted_text)
+print("The encrypted sentence is:", encrypted_text)
